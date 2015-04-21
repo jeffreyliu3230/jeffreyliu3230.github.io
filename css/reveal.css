@@ -1146,12 +1146,12 @@ body {
 
 .container .left, .container .center, .container .right { display: inline-block; }
 
-.container .left { float: left; margin-left: -160px;}
-.container .center { margin: 0 auto; margin-left: -80px;}
-.container .right { float: right; margin-right: -160px;}
+.container .left { float: left; margin-left: 0px;}
+.container .center { margin: 0 auto; margin-left: 0px;}
+.container .right { float: right; margin-right: 0px;}
 .clear { clear: both; }  
 
-.reference {position: absolute; bottom: -50px; right: 	-200px}
+.reference {position: absolute; bottom: 0px; right: 	-200px}
 
 .venn {width: 300px; margin: 0 auto 0 auto; z-index=5} 
 
