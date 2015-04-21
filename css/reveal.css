@@ -1142,16 +1142,18 @@ body {
 
   
 /* custom css */
-.container {right: 0; text-align: center;}
+.container {right: 0; text-align: center; padding: 10%}
 
-.container .left, .container .center, .container .right { display: inline-block; }
+.container .left, .container .center, .container .right, .container .left2, .container .right2, { display: inline-block; }
 
-.container .left { float: left; margin-left: 0px;}
-.container .center { margin: 0 auto; margin-left: 0px;}
-.container .right { float: right; margin-right: 0px;}
+.container .left { float: left; width:33%}
+.container .center { margin: 0 auto; width:33%}
+.container .right { float: right; width:33%} 
+.container .left2 { float: left; width:45%}
+.container .right2 { float: right; width:45%} 
 .clear { clear: both; }  
 
-.reference {position: absolute; bottom: 0px; right: 	-200px}
+.reference {position: absolute; bottom: 0px; right: 	0px; text-align:left}
 
 .venn {width: 300px; margin: 0 auto 0 auto; z-index=5} 
 
