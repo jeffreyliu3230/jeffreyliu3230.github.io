@@ -42,14 +42,14 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section data-background-image="assets/front3.gif">
+				<section>
 					<h2>Predictive Models for Severe Sepsis in Adult ICU Patients</h2>
 					<p><br><br><p>
 					<p>
-						<small>Joseph Guillén, Jiankun Liu, Margaret Furr, Tianyao Wang</small>
+						Joseph Guillén, Jiankun Liu, Margaret Furr, Tianyao Wang
 					</p>
 				</section>
-				<section data-background-image="assets/front3.gif">
+				<section>
 					<h2>Agenda</h2>
 					<div class="fragment roll-in">
 					<ul>
@@ -62,84 +62,19 @@
 				</section>
 				<section>
 					<section>
-					<h2>Severe Sepsis</h2>
+					<h2>Severe Sepsis Definition</h2>
 					<div class="fragment roll-in">
 					<ul>
-						<li>Defined as “systemic inflammatory response to infection complicated by acute organ dysfunction” (NEJM 369:840-851)
-</li>
-						<li>High incidence in the hospital and intensive care unit</li>
-						<li>High mortality rate</li>
-						<li>Patient outcomes dramatically improved by early intervention</li>
+						<li>A syndrome of organ dysfunction in the setting of infection</li>
+						<li>Accepted clinical definitions are imprecise and miss 1/8 cases</li>
+						<li>High lactate concentration reflects organ 
+						hypoperfusion and is a quantitative method of 
+						determining mortality risk in sepsis</li>
+						<li>Our definition is therefore: 
+						High lactate (>4 mmol/L) plus infection (blood 
+						culture acquisition)</li>
 					</ul>
 					<div>
-					</section>
-					<section>
-					<h2>Objectives</h2>
-					<div class="fragment roll-in">
-					<ul>
-						<li>Build predictive models for severe sepsis based on laboratory values and vital signs
-</li>
-						<li>For patients with severe sepsis, build predictive models for lactate clearance
-</li>
-					</ul>
-					</div>
-					</section>
-					<section data-background="assets/venn.png" data-state="myslide1">
-						<div class="container">
-							<div class="left">
-								<h4 style="text-align:left">Systemic Inflammatory<br> Response Syndrome (SIRS)</h4>
-								<p style="text-align:left;font-size:80%; margin-right:10%" class="fragment roll-in">
-								<br>
-								(≥2 of the following)
-								Temperature >38oC or <36oC
-								Pulse, >90/min
-								Respirations, >20/min
-								White cells, >12,000
-								 or <4000/mm3 or >10%
-								 band forms
-								</p>
-							</div>
-							
-							<div class="right">
-								<h3 style="text-align:right">Infection<br><br></h3>
-								<p style="text-align:right;font-size:80%" class="fragment roll-in"> 
-								Suspected or Proven <p>
-							</div>
-							
-							<div class="center" style="z-index=-1">
-								<h3 style="text-align:center">Sepsis<br><br></h3>
-								<p style="text-align:center; font-size: 80%" class="fragment roll-in">
-								SIRS + Infection
-								<p>
-								<div style="margin: 0 auto; width: 200px; height: 200px;">
-								<img class="fragment roll-in" width="200px" height="200px" data-src="assets/venn2.png" style="background:none; border:none; box-shadow:none; margin-top:10%">
-								</div>
-							</div>
-							<div class="clear"></div>
-							<div style="clear: both;"></div>
-							<div style="margin:0 auto -50px auto">
-								
-							</div>
-							<div class="reference" style="font-size:50%">
-								<p class="fragment roll-in">N Engl J Med 2002; <br>Sep 347:966-967</p>
-							</div>
-						</div>
-					</section>
-					<section data-transition="fade">
-						<div class="container">
-							<img width="780" height="600" data-src="assets/pyramid.png" border="0" style="background:none; border:none; box-shadow:none;">
-						</div>
-						<div class="reference" style="font-size:50%">
-								<p class="fragment roll-in">N Engl J Med 2002; <br>Sep 347:966-967</p>
-						</div>
-					</section>
-					<section data-transition="fade">
-						<div class="container">
-							<img width="780" height="600" data-src="assets/pyramid2.png" border="0" style="background:none; border:none; box-shadow:none;">
-						</div>
-						<div class="reference" style="font-size:50%">
-								<p>N Engl J Med 2002; <br>Sep 347:966-967</p>
-						</div>
 					</section>
 					<section>
 						<div class="container">
@@ -164,21 +99,49 @@
 						</div>
 						
 					</section>
-				</section>
-				<section>
-					<section data-background-image="assets/data.jpg">
-						<h2>Data</h2>
-					</section>
-					<section data-state="mortality-sepsis">
-						<div style="width: 800px; margin: 0 auto 0 auto">
-							<img width="800px" height="480px" data-src="assets/mortality_sepsis.png">
+					<section>
+						<h2>Lactate Clearance</h2>
+						<div class="fragment roll-in">
+						<ul>
+							<li>Strongly associated with improved outcomes</li>
+							<li>Delayed clearance indicative of organ dysfunction or continual shock</li>
+							<li>More aggressive resuscitation for patients with high risk of delayed clearance</li>
+						</ul>
 						</div>
 					</section>
+					<section>
+					<h2>Objectives</h2>
+					<div class="fragment roll-in">
+					<ul>
+						<li>Build predictive models for the early detection of severe sepsis based on clinical data
+</li>
+						<li>For patients classified as having severe sepsis, build predictive models for lactate clearance
+</li>
+					</ul>
+					</div>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Data</h2>
+						<ul>
+						<li>Source:
+							<p> MIMIC-II database -- contains comprehensive data for about 32,000 patients 
+							from multiple ICUs at the Beth Israel Deaconess Medical Center from 2001 to 2008.
+							</p>
+						</li>
+						<li>Cohort:
+							<p>24 hours model: 3446 <br> 48 hours model: 2889 <br> latate clearance: 938
+							</p>
+						</li>
+						</ul>
+					</section>
+					
 					<section>
 					</section>
 				</section>
 				<section>
-					<section data-state="performance1" data-background-image="assets/perform.gif">
+					<section data-state="performance1">
 						<div style="width: 600px; margin: 0 auto 0 auto">
 							<h2>Performance</h2>
 						</div>
@@ -226,14 +189,9 @@
 					<section data-background-image="assets/clear.jpg">
 						<h2>Lactate Clearance Models</h2>
 					</section>
-					<section>
-						<h2>Lactate Clearance</h2>
-						<div class="fragment roll-in">
-						<ul>
-							<li>Strongly associated with improved outcomes</li>
-							<li>Delayed clearance indicative of organ dysfunction or continual shock</li>
-							<li>More aggressive resuscitation for patients with high risk of delayed clearance</li>
-						</ul>
+					<section data-state="mortality-sepsis">
+						<div style="width: 800px; margin: 0 auto 0 auto">
+							<img width="800px" height="480px" data-src="assets/mortality_sepsis.png">
 						</div>
 					</section>
 					
