@@ -28,73 +28,6 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
-		
-		<script type="text/javascript">
-								Reveal.addEventListener( 'performance1', function() {
-								var chart = c3.generate({
-									bindto: '#chart1',
-									data: {
-										columns: [
-											['Sensitivity', .436, .546, .603]
-										],
-										type: 'bar',		
-									},
-									axis: {
-											x: {
-												type: 'category',
-												categories: ['Vital', 'Lab', 'All']
-											}
-										},
-									bar: {
-										width: {
-											ratio: 0.5 // this makes bar width 50% of length between ticks
-										}
-										// or
-										//width: 100 // this makes bar width 100px
-									},
-								});
-
-								setTimeout(function () {
-									chart.load({
-										columns: [
-											['Specificity', .899, .920, .932]
-										],
-										unload: ['Sensitivity']
-									});
-								}, 1000);
-
-								setTimeout(function () {
-									chart.load({
-										columns: [
-											['PPV', .447, .563, .624]
-										],
-										unload: ['Specificity']
-									});
-								}, 2000);
-
-								setTimeout(function () {
-									chart.load({
-										columns: [
-											['NPV', .894, .915, .926]
-										],
-										unload: ['PPV']
-									});
-								}, 3000);
-
-								setTimeout(function () {
-									chart.load({
-										columns: [
-											['Vital', .436, .447, .899, .894],
-											['Lab', .546, .563, .920, .915],
-											['All', .603, .624, .932, .926]
-										],
-										unload: ['NPV'],
-										categories: ['Sensitivity', 'PPV', 'Specificity', 'NPV'],
-										colors: {Vital: '#5DA5DA', Lab: '#FAA43A', All: '#60BD68'},
-									});
-								}, 4000);
-								});
-							</script>
 
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
@@ -153,13 +86,15 @@
 								<p style="text-align:center; font-size: 80%" class="fragment roll-in">
 								SIRS + Infection
 								<p>
-							</div>
-							<div class="clear"></div>
-							<div style="margin:0 auto -50px auto">
 								<img class="fragment roll-in" width="200" height="200" data-src="assets/venn2.png" style="background:none; border:none; box-shadow:none;">
 							</div>
+							<div class="clear"></div>
+							<div style="clear: both;"></div>
+							<div style="margin:0 auto -50px auto">
+								
+							</div>
 							<div class="reference" style="font-size:50%">
-								<p>N Engl J Med 2002; <br>Sep 347:966-967</p>
+								<p class="fragment roll-in">N Engl J Med 2002; <br>Sep 347:966-967</p>
 							</div>
 						</div>
 					</section>
@@ -168,7 +103,7 @@
 							<img width="780" height="600" data-src="assets/pyramid.png" border="0" style="background:none; border:none; box-shadow:none;">
 						</div>
 						<div class="reference" style="font-size:50%">
-								<p>N Engl J Med 2002; <br>Sep 347:966-967</p>
+								<p class="fragment roll-in">N Engl J Med 2002; <br>Sep 347:966-967</p>
 						</div>
 					</section>
 					<section data-transition="fade">
@@ -281,6 +216,9 @@
 				</section>
 				<section data-background-image="assets/front3.gif">
 					<h2>Thank you!</h2>
+				</section>
+				<section>
+					<h2>References</h2>
 				</section>
 
 			</div>
