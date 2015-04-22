@@ -1153,7 +1153,7 @@ body {
 .container .right2 { float: right; width:45%} 
 .clear { clear: both; }  
 
-.reference {position: absolute; bottom: 0px; right: 	0px; text-align:left}
+.reference {position: absolute; bottom: 0px; right: 	0px; text-align:left; font-size:50%}
 
 .venn {width: 300px; margin: 0 auto 0 auto; z-index=5} 
 
