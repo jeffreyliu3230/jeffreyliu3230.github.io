@@ -1149,8 +1149,8 @@ body {
 .container .left { float: left; width:33%}
 .container .center { margin: 0 auto; width:33%}
 .container .right { float: right; width:33%} 
-.container .left2 { float: left; width:45%}
-.container .right2 { float: right; width:45%} 
+.container .left2 { float: left; width:55%}
+.container .right2 { float: right; width:40%} 
 .clear { clear: both; }  
 
 .reference {position: absolute; bottom: 0; right: 	0; text-align:left;font-size:50%}
